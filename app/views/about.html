@@ -1,0 +1,32 @@
+<h1>Maps</h1>
+
+<ui-gmap-google-map
+  center='map.center'
+  zoom='map.zoom'
+>
+  <!--<ui-gmap-window-->
+    <!--models="tollData"-->
+    <!--coords="tollData.coords"-->
+    <!--show="windowOptions.show"-->
+    <!--closeClick="closeClick()">-->
+
+  <!--</ui-gmap-window>-->
+
+  <ui-gmap-markers
+    models="tollData"
+    coords="'self'"
+    click="onClick"
+  click="">
+
+    <ui-gmap-windows show="show">
+      <div ng-non-bindable>yo</div>
+    </ui-gmap-windows>
+
+  </ui-gmap-markers>
+
+
+
+  </ui-gmap-marker>
+
+
+</ui-gmap-google-map>
