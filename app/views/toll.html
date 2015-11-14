@@ -1,0 +1,28 @@
+<h1>Oversikt over bomstasjoner i Norge</h1>
+
+<ui-gmap-google-map
+  center='map.center'
+  zoom='map.zoom'
+  data-tap-disabled="true"
+>
+
+  <ui-gmap-markers
+    models="tollDatas"
+    coords="'self'"
+    click="onClick"
+  >
+
+  </ui-gmap-markers>
+
+  <ui-gmap-window
+    show="windowData.show"
+    coords="windowData.coords"
+    templateUrl="'views/info-window.html'"
+    templateParameter="{params:windowData.params}"
+    options="windowData.opt"
+    closeClick="closeClick()">
+
+
+  </ui-gmap-window>
+
+</ui-gmap-google-map>

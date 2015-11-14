@@ -1,32 +1,28 @@
-<h1>Maps</h1>
+<div class="container">
+  <h2>Om</h2>
 
-<ui-gmap-google-map
-  center='map.center'
-  zoom='map.zoom'
->
-  <!--<ui-gmap-window-->
-    <!--models="tollData"-->
-    <!--coords="tollData.coords"-->
-    <!--show="windowOptions.show"-->
-    <!--closeClick="closeClick()">-->
+  <div>
+    Testprosjekt med bruk av åpne data og Google maps.
+  </div>
+  <!-- Todos input -->
+  <!--<form role="form" ng-submit="addTodo()">-->
+  <!--<div class="row">-->
+  <!--<div class="input-group">-->
+  <!--<input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">-->
+  <!--<span class="input-group-btn">-->
+  <!--<input type="submit" class="btn btn-primary" value="Add">-->
+  <!--</span>-->
+  <!--</div>-->
+  <!--</div>-->
+  <!--</form>-->
 
-  <!--</ui-gmap-window>-->
-
-  <ui-gmap-markers
-    models="tollData"
-    coords="'self'"
-    click="onClick"
-  click="">
-
-    <ui-gmap-windows show="show">
-      <div ng-non-bindable>yo</div>
-    </ui-gmap-windows>
-
-  </ui-gmap-markers>
-
-
-
-  </ui-gmap-marker>
-
-
-</ui-gmap-google-map>
+  <!--&lt;!&ndash; Todos list &ndash;&gt;-->
+  <!--<div ui-sortable ng-model="todos">-->
+  <!--<p class="input-group" ng-repeat="todo in todos" style="padding:5px 10px; cursor: move;">-->
+  <!--<input type="text" ng-model="todo" class="form-control">-->
+  <!--<span class="input-group-btn">-->
+  <!--<button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>-->
+  <!--</span>-->
+  <!--</p>-->
+  <!--</div>-->
+</div>

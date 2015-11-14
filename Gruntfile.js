@@ -497,7 +497,6 @@ module.exports = function (grunt) {
   ]);
   grunt.registerTask('release', function () {
     grunt.task.run([
-      'build',
       'war'
     ]);
   });

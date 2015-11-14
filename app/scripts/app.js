@@ -18,22 +18,33 @@ angular
     'ngTouch',
     'ui.sortable',
     'uiGmapgoogle-maps',
-    'LocalStorageModule'
+    'LocalStorageModule',
 
   ]).config(['localStorageServiceProvider', function(localStorageServiceProvider){
     localStorageServiceProvider.setPrefix('ls');
   }])
-  .config(function ($routeProvider) {
+  .config(['uiGmapGoogleMapApiProvider', function(uiGmapGoogleMapApiProvider){
+    uiGmapGoogleMapApiProvider.configure({
+      //    key: 'your api key',
+      v: '3.20', //defaults to latest 3.X anyhow
+      libraries: 'weather,geometry,visualization'
+    });
+  }])
+
+  .config(function ($routeProvider,uiGmapGoogleMapApiProvider) {
+
+
+
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
+      .when('/om', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/', {
+        templateUrl: 'views/toll.html',
+        controller: 'TollCtrl',
+        controllerAs: 'toll'
       })
       .otherwise({
         redirectTo: '/'
