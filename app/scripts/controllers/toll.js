@@ -15,7 +15,7 @@ angular.module('beerApp')
     uiGmapGoogleMapApi.then(function (maps) {
       console.log('rdy');
       if ($scope.tollDatas.length === 0) {
-        $http.get('http://hotell.difi.no/api/json/vegvesen/bomstasjoner?page=1').then(function (data) {
+        $http.get('https://hotell.difi.no/api/json/vegvesen/bomstasjoner?page=1').then(function (data) {
 
           var _count = 0;
           angular.forEach(data.data.entries, function (toll) {
